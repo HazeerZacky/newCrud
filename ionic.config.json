@@ -1,0 +1,7 @@
+{
+  "name": "newCrud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
