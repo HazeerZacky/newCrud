@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h6>Welcome Home</h6>
+<ion-button (click) = "create()">Create Product</ion-button>
+
+<ion-grid>
+  <ion-grid-head>
+    <ion-row>
+      <ion-col>Name
+      </ion-col>
+      <ion-col>Description
+      </ion-col>
+      <ion-col>Price
+      </ion-col>
+      <ion-col>Owner
+      </ion-col>
+      <ion-col>Action</ion-col>
+    </ion-row>
+  </ion-grid-head>
+  <ion-row *ngFor="let prod of products">
+    
+
+<ion-col>{{prod.name}}</ion-col>
+  <ion-col>{{prod.description}}</ion-col>
+  <ion-col>{{prod.price}}</ion-col>
+  <ion-col>{{prod.owner}}</ion-col>
+  <ion-col>
+    <ion-button (click) = "delete()" class="btn btn-sm"><ion-icon name="trash-outline"></ion-icon></ion-button>
+   <ion-button (click) = "update()"> <ion-icon name="create"></ion-icon></ion-button>
+
+  </ion-col>
+
+  </ion-row>
+  
+
+</ion-grid>
+
+</ion-content>

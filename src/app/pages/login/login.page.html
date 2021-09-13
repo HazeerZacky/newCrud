@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary" align="center">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label><br>
+    <ion-input [(ngModel)] = "login.email" type="email" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)] = 'login.password'type="password" required></ion-input>
+  </ion-item>
+
+  <ion-button (click) = 'signin()' class="ion-padding" color="primary" expand="full">
+    LOGIN
+  </ion-button>
+  <ion-button
+    class="ion-padding"
+    color="light"
+    expand="full"
+    [routerLink] = "['/register']"
+  >
+    REGISTER
+  </ion-button>
+
+</ion-content>
